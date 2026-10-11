@@ -2,6 +2,8 @@
 
 **Turn any binary you own into a JSON analysis report + pseudocode for your AI agent, in one command.** This wraps Ghidra's documented headless mode as a standard agent skill. You need it if your security-audit or triage agents keep hand-rolling Ghidra invocations.
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 Ghidra ([NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra)) is the de-facto open-source reverse-engineering framework: disassembly, decompilation, and a scripting interface, all automatable. Its B-side is underused: the **headless analyzer + post-scripts** are a ready-made backend for AI reverse-engineering agents — more orchestration-friendly and more compatible across binary formats than most alternatives — yet almost nobody has packaged it as a clean agent-facing interface. Agents end up gluing subprocess calls, parsing fragile console output, and re-inventing report schemas per project.
